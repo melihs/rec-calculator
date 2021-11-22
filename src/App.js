@@ -1,20 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
+import Button from './components/Button/button';
 
 const App = () => {
-    const [calc, setCalc] = useState("");
-    const [result, setResult] = useState("");
+    const [calc, setCalc] = useState('');
+    const [result, setResult] = useState('');
 
     const operators = ['/', '*', '+', '-', '.'];
 
     const updateCalc = (val) => {
         if (
-            (operators.includes(val) && calc === '') || 
+            (operators.includes(val) && calc === '') ||
             (operators.includes(val) && operators.includes(calc.slice(-1)))
-            ) {
-               return;
-            }
-        
+        ) {
+            return;
+        }
+
         setCalc(calc + val);
 
         if (!operators.includes(val)) {
@@ -38,7 +39,7 @@ const App = () => {
 
     const clear = () => {
         if (calc === '') return;
-        
+
         setCalc('');
         setResult('');
     }
@@ -51,18 +52,17 @@ const App = () => {
                     { calc || '0' }
                 </div>
                 <div className="operators">
-                    <button onClick= { () => updateCalc('/') }>/</button>
-                    <button onClick= { () => updateCalc('*') }>*</button>
-                    <button onClick= { () => updateCalc('+') }>+</button>
-                    <button onClick= { () => updateCalc('-') }>-</button>
-
-                    <button onClick={ () => clear() }>DEL</button>
+                    <Button handleClick={ () => updateCalc('/')} value="/"/>
+                    <Button handleClick={ () => updateCalc('*')} value="*"/>
+                    <Button handleClick={ () => updateCalc('+')} value="+"/>
+                    <Button handleClick={ () => updateCalc('-')} value="-"/>
+                    <Button handleClick={ clear } value="DEL"/>
                 </div>
                 <div className="digits">
-                    {createDigits()}            
-                    <button onClick={ () => updateCalc('0') }>0</button>
-                    <button onClick={ () => updateCalc('.') }>.</button>
-                    <button onClick={ () => calculate() }>=</button>
+                    {createDigits()}
+                    <Button handleClick={ () => updateCalc('0') } value= "0"/>
+                    <Button handleClick={ () => updateCalc('.') } value="."/>
+                    <Button handleClick={ () => calculate() } value="="/>
                 </div>
             </div>
         </div>

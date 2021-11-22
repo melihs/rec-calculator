@@ -18,6 +18,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "author": "Melih Şahin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melihs/rec-calculator"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

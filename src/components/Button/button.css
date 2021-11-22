@@ -1,0 +1,35 @@
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.operators {
+  display: flex;
+}
+
+.operators button {
+  flex: 1 1 0;
+  background-color: var(--primary);
+  font-weight: 700;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.3333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
+}
