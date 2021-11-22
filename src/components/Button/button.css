@@ -2,7 +2,7 @@ button {
   appearance: none;
   border: none;
   outline: none;
-  color: var(--white);
+  color: white;
   font-size: 20px;
   padding: 16px;
   cursor: pointer;
@@ -10,17 +10,22 @@ button {
 }
 
 button:hover {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .operators {
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 
 .operators button {
   flex: 1 1 0;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   font-weight: 700;
+  border: 1px solid black;
+  color:black ;
+  box-shadow: inset 0 0 3px 0;
 }
 
 .digits {
@@ -31,5 +36,17 @@ button:hover {
 .digits button {
   flex: 1 1 33.3333%;
   max-width: 33.333%;
-  background-color: var(--dark);
+  background-color: var(--dark-gray);
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.clear-btn {
+  color: white !important;
+  background-color: var(--rose) !important;
+}
+
+.enter-btn {
+  color: white !important;
+  background-color: #686049 !important;
 }

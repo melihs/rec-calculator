@@ -6,13 +6,12 @@
 }
 
 :root {
-  --primary: #d81e5b;
-  --secondary: #8c38ff;
-  --dark: #131a26;
+  --rose: #E87037;
+  --secondary: #eaac10;
   --light: #eeee;
-  --white: #fff;
-  --green: rgb(102, 245, 7);
-  --dark-green: rgb(77, 180, 8);
+  --green: #66F507FF;
+  --dark-green: #4DB408FF;
+  --dark-gray: #525253F2;
 }
 
 * {
@@ -23,7 +22,7 @@
 }
 
 body {
-  background-color: var(--light);
+  background-image: linear-gradient(185deg, #0e100d,#8fa58f , black);
 }
 
 .App {
@@ -32,28 +31,43 @@ body {
   align-items: center;
   justify-content: center;
   padding: 16px;
+  border: 1px solid black;
 }
 
 .calculator {
   width: 100%;
   max-width: 400px;
-  background-color: var(--white);
-  border-radius: 16px;
+  border: 5px solid black;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 2px 64px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 64px #00000033;
+  background-color: black;
 }
 
 .display {
+  margin: 6px;
   padding: 16px;
+  position: relative;
+  z-index: 10;
+  outline: 10px solid black;
+  background-color: black;
   text-align: right;
-  background-color: var(--dark);
   font-family: 'digit';
   color: var(--green);
   font-size: 44px;
   font-weight: 300;
+  text-shadow: 1px 2px #2c2c2c;
+  box-shadow: inset -1px 1px 20px 1px;
 }
 
 .display span {
-  font-size: 22px;
+  font-size: 20px;
+  word-wrap: break-word;
   color: var(--dark-green);
+}
+
+.outher-edge {
+  height: 50px;
+  box-shadow: inset 4px 28px 114px -2px;
+  background: gray;
 }
