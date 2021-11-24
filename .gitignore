@@ -3,6 +3,8 @@
 .vscode/
 .idea/
 
+.netlify/
+
 # dependencies
 /node_modules
 /.pnp
